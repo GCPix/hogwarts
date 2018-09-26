@@ -8,13 +8,16 @@
     <input id="last-name" type = "text" name = "last_name" required/>
 
   <label for = "house">House: </label>
-    <select id="first-name" name = "house"/>
-      <option value = "" disabled selected> Select a House </option>
-      <option value = "Gryffindor">Gryffindor</option>
+    <select id="house" name = "house_id"/>
+    <%for house in @houses%>
+      <option value = <%=house.name%> > <%= house.name %> </option>
+      <%end%>
+    <%#  <option value = "Gryffindor">Gryffindor</option>
       <option value = "Hufflepuff">Hufflepuff</option>
       <option value = "Slytherin">Slytherin</option>
-      <option value = "Ravenclaw">Ravenclaw</option>
+      <option value = "Ravenclaw">Ravenclaw</option> %>
     </select>
+
   <label for = "age">Age: </label>
     <input id="age" type = "number" name = "age" min = "11" required/>
 
