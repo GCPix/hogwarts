@@ -9,6 +9,7 @@ also_reload('./models/*')
 
 get '/students' do
   @students = Student.find_all
+  @houses = House.find_all
   erb(:index)
 end
 
